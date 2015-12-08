@@ -2,6 +2,8 @@ M = {
 	defaultRuleString: (161).toString(2),
 
 	setRule: function(ruleString) {
+		var prefix = Array(8-ruleString.length).fill(0).join('');
+		ruleString = prefix+ruleString;
 		this.rule = {
 			'111': ruleString[0] | 0,
 			'110': ruleString[1] | 0,

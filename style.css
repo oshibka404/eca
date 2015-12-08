@@ -3,3 +3,23 @@ body, html {
 	height: 100%;
 	margin: 0;
 }
+
+#controls {
+	position: fixed;
+	right: 0;
+	top:0;
+	height: 100%;
+	background-color: rgba(255,255,255,.6);
+}
+
+.input {
+	padding: 20px;
+}
+.input input {
+	padding: 5px;
+	opacity: .6;
+}
+
+.input input:focus {
+	opacity: 1;
+}

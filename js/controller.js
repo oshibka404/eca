@@ -3,6 +3,7 @@ C = {
 		M.size = window.innerWidth;
 		this.steps = window.innerHeight;
 		console.log(this.draw());
+		controls.init(M.defaultRuleString);
 	},
 
 	draw: function() {
