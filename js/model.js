@@ -1,5 +1,5 @@
 M = {
-	defaultRule: (161).toString(2),
+	defaultRuleString: (161).toString(2),
 
 	setRule: function(ruleString) {
 		this.rule = {
@@ -48,7 +48,7 @@ M = {
 
 	getCellValue: function(left, current, right) {
 		if (!this.rule) {
-			this.setRule(this.defaultRule);
+			this.setRule(this.defaultRuleString);
 		}
 
 		var key = [left, current, right].join('');
