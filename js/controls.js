@@ -36,9 +36,9 @@ controls = {
 		this.bin.value = prefix + ruleString;
 	},
 
-	onSubmit: function() {
+	onSubmit: function(e) {
+		e.preventDefault();
 		M.setRule(this.bin.value);
 		C.draw();
-		return false;
 	}
 };
