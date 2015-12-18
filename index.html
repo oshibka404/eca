@@ -6,7 +6,7 @@
 	<script type="text/javascript" src="js/view.js"></script>
 	<script type="text/javascript" src="js/controller.js"></script>
 	<script type="text/javascript" src="js/controls.js"></script>
-	<link rel="stylesheet" href="style.css"/>
+	<link rel="stylesheet" href="css/main.css"/>
 </head>
 <body>
 	<canvas id="canvas"></canvas>
@@ -17,8 +17,16 @@
 		<div class="input">
 			<input id="binary"/>
 		</div>
-		<input type="submit" value="Нарисовать">
+		<div class="radiogroup">
+			Initial state:<br/>
+			<input type="radio" name="initialstate" value="one" checked/> One point in the center<br/>
+			<input type="radio" name="initialstate" value="full"/> Full initial state<br/>
+			<input type="radio" name="initialstate" value="empty"> Empty initial state<br/>
+			<input type="radio" name="initialstate" value="random"> Random initial state
+		</div>
+		<input id="run" type="submit" value="Draw!"/>
 	</form>
+	<div id="loadmask">drawing...</div>
 	<script type="text/javascript">
 		C.init();
 	</script>

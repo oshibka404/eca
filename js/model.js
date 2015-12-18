@@ -28,6 +28,25 @@ M = {
 
 	getInititalState: function() {
 		var state = Array(this.size);
+		switch (this.stateType) {
+			case 'one':
+				state.fill(0);
+				state[parseInt(state.length/2)] = 1;
+				return state;
+			case 'full':
+				state.fill(1);
+				return state;
+			case 'empty':
+				state.fill(0);
+				return state;
+			case 'random':
+			default:
+				return this.getRandomInitialState();
+		}
+	},
+
+	getRandomInitialState: function() {
+		var state = Array(this.size);
 		for (var i = 0; i < state.length; i++) {
 			state[i] = Math.round(Math.random()); // {0, 1}
 		}
@@ -39,9 +58,9 @@ M = {
 		
 		for (var i = 0; i < previousState.length; i++) {
 			newState[i] = this.getCellValue(
-				previousState[i-1] | 0, 
+				i === 0 ? previousState[previousState.length-1] : previousState[i-1] | 0, 
 				previousState[i], 
-				previousState[i+1] | 0
+				i === previousState.length-1 ? previousState[0] : previousState[i+1] | 0
 			);
 		}
 
