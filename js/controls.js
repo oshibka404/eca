@@ -3,6 +3,7 @@ controls = {
 		this.bin = document.getElementById('binary');
 		this.dec = document.getElementById('decimal');
 		this.form = document.getElementById('controls');
+		M.stateType = document.querySelector('input[name="initialstate"]:checked').value;
 
 		var decValue = parseInt(ruleString, 2);
 
@@ -39,6 +40,9 @@ controls = {
 	onSubmit: function(e) {
 		e.preventDefault();
 		M.setRule(this.bin.value);
+
+		M.stateType = document.querySelector('input[name="initialstate"]:checked').value;
+
 		C.draw();
 	}
 };

@@ -5,7 +5,7 @@ V = {
 			canvas.width = window.innerWidth;
 			canvas.height = window.innerHeight;
 			var ctx = this.ctx = canvas.getContext("2d");
-			ctx.fillStyle = "rgb(255,0,0)";
+			ctx.fillStyle = "rgb(0,0,0)";
 			ctx.moveTo(0,0);
 		}
 

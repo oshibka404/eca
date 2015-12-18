@@ -2,17 +2,20 @@ C = {
 	init: function () {
 		M.size = window.innerWidth;
 		this.steps = window.innerHeight;
-		console.log(this.draw());
 		controls.init(M.defaultRuleString);
+		setTimeout(this.draw.bind(this), 1);
 	},
 
 	draw: function() {
+		document.body.className = 'loading';
 		var t0 = performance.now();
+		M.state = null;
 		for (var i = 0; i < this.steps; i++) {
 			var state = M.getNewState();
 			V.drawLine(i, state);
 		}
-		return performance.now() - t0;
+		document.body.className = '';
+		console.log(performance.now() - t0);
 	},
 
 	setDecimalRule: function(decRule) {
