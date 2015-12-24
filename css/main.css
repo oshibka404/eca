@@ -43,6 +43,12 @@ canvas {
 
 #loadmask {
 	display: none;
+	position: absolute;
+	left:50%;
+	top:50%;
+	font-size: 24px;
+	margin-left:-50px;
+
 }
 
 .loading #loadmask {
