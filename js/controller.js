@@ -3,11 +3,15 @@ C = {
 		M.size = window.innerWidth;
 		this.steps = window.innerHeight;
 		controls.init(M.defaultRuleString);
+		this.start();
+	},
+
+	start: function() {
+		document.body.className = 'loading';
 		setTimeout(this.draw.bind(this), 1);
 	},
 
 	draw: function() {
-		document.body.className = 'loading';
 		var t0 = performance.now();
 		M.state = null;
 		for (var i = 0; i < this.steps; i++) {
