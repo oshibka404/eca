@@ -5,7 +5,7 @@ body, html {
 }
 
 canvas {
-	image-rendering: pixelated;
+	/*image-rendering: pixelated;*/
 }
 
 #controls {
@@ -17,7 +17,7 @@ canvas {
 }
 
 .input {
-	padding: 20px;
+	padding: 5px 20px;
 }
 .input input {
 	padding: 5px;
@@ -26,6 +26,10 @@ canvas {
 
 .input input:focus {
 	opacity: 1;
+}
+
+.input label {
+	display: block;
 }
 
 .radiogroup {
