@@ -1,7 +1,7 @@
 C = {
 	init: function () {
-		M.size = window.innerWidth;
-		this.steps = window.innerHeight;
+		M.size = 600;
+		this.steps = 300;
 		controls.init(M.defaultRuleString);
 		this.start();
 	},
