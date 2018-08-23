@@ -1,7 +1,7 @@
 C = {
 	init: function () {
-		M.size = 600;
-		this.steps = 300;
+		M.size = 1000;
+		this.steps = 750;
 		controls.init(M.defaultRuleString);
 		this.start();
 	},
